@@ -317,3 +317,7 @@ Things to try out if your model does not match your expectations, especially in 
 ## Credits
 
 This package was created with Cookiecutter and the [sourcery-ai/python-best-practices-cookiecutter](https://github.com/sourcery-ai/python-best-practices-cookiecutter) project template.
+
+Tetris implementation build upon https://github.com/TakeruIto/tetris-opencv/
+
+Models based on https://www.tensorflow.org/tutorials/images/classification
