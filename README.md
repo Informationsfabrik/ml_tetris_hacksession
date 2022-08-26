@@ -10,6 +10,8 @@ externally and is integrated into our program to create your own ML-model using 
 
 ## Setup
 
+Install Python 3.10, if not already happened.
+
 ```sh
 # Check out this repository
 git clone <url>
