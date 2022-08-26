@@ -321,3 +321,7 @@ This package was created with Cookiecutter and the [sourcery-ai/python-best-prac
 Tetris implementation build upon https://github.com/TakeruIto/tetris-opencv/
 
 Models based on https://www.tensorflow.org/tutorials/images/classification
+
+Original implementation by 
+https://github.com/l-anozie
+https://github.com/thunfischtoast
