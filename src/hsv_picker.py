@@ -163,7 +163,7 @@ def hsv_calc(title: str, lower: np.array, upper: np.array):
     window = sg.Window(f"{title}", layout, location=(800, 400), finalize=True)
     move_center(window)
 
-    cap = cv2.VideoCapture(CAMERA_DEVICE_ID)
+    cap = cv2.VideoCapture(CAMERA_DEVICE_ID, cv2.CAP_DSHOW)
 
     print(title)
 

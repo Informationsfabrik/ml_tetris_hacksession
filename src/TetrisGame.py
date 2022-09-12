@@ -20,7 +20,7 @@ class TetrisGame(ABC):
     """
 
     def start(self):
-        cam = cv2.VideoCapture(CAMERA_DEVICE_ID)
+        cam = cv2.VideoCapture(CAMERA_DEVICE_ID, cv2.CAP_DSHOW)
         self.play(cam)
         cam.release()
         cv2.destroyAllWindows()
@@ -146,6 +146,7 @@ class TetrisGame(ABC):
 
             # get a webcam frame
             _, frame = cam.read()
+            frame = cv2.flip(frame, 1)
             if frame is None:
                 raise IOError(
                     "Could not get image from webcam. Make sure that all programs that use the webcam are closed."

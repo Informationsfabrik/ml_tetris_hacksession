@@ -15,11 +15,11 @@ class ColorDetectionTetris(TetrisGame):
         need_to_reconfigure = boolean_question(
             "Do you want to reconfigure the color settings?"
         )
-        cam = cv2.VideoCapture(0)
+        cam = cv2.VideoCapture(CAMERA_DEVICE_ID, cv2.CAP_DSHOW)
         while need_to_reconfigure:
             cam.release()
             configure_colors()
-            cam = cv2.VideoCapture(0)
+            cam = cv2.VideoCapture(CAMERA_DEVICE_ID, cv2.CAP_DSHOW)
             need_to_reconfigure = self.show_color_confirmation(cam)
         cam.release()
         super().start()

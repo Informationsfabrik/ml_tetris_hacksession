@@ -40,7 +40,7 @@ def run_data_generator():
     turn_images = []
     other_images = []
     frame_counter = 0
-    cap = cv2.VideoCapture(CAMERA_DEVICE_ID)
+    cap = cv2.VideoCapture(CAMERA_DEVICE_ID, cv2.CAP_DSHOW)
     ret, _ = cap.read()
     y0 = 10
     while ret:
