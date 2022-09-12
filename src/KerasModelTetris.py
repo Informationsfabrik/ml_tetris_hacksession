@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Tuple
+from typing import Optional, Tuple
 
 import numpy as np
 from PIL import Image, ImageOps
@@ -22,8 +22,8 @@ class KerasModelTetris(TetrisGame):
             self.labels = [line.split(" ")[-1].strip() for line in fp.readlines()]
 
     def detect_command_from_key_or_image(
-        self, frame: np.ndarray, bbox_array: np.ndarray, keyboard_event: str | None
-    ) -> Tuple[str | None, str, np.ndarray]:
+        self, frame: np.ndarray, bbox_array: np.ndarray, keyboard_event: Optional[str]
+    ) -> Tuple[Optional[str], str, np.ndarray]:
 
         data = np.ndarray(
             shape=(1, self.input_shape[0], self.input_shape[1], 3), dtype=np.float32

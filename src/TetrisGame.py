@@ -39,7 +39,7 @@ class TetrisGame(ABC):
         self,
         frame: Any,
         base_img: Optional[np.ndarray] = None,
-        keyboard_event: str | None = None,
+        keyboard_event: Optional[str] = None,
     ) -> Tuple[Optional[str], np.ndarray]:
         """Using the current webcam frame, get the command for that frame using the specific implementation
         (e.g. color-based or teachable machine).
@@ -200,7 +200,7 @@ class TetrisGame(ABC):
 
     @abstractmethod
     def detect_command_from_key_or_image(
-        self, frame: np.ndarray, bbox_array: np.ndarray, keyboard_event: str | None
+        self, frame: np.ndarray, bbox_array: np.ndarray, keyboard_event: Optional[str]
     ) -> Tuple[str, str, np.ndarray]:
         """Detects a user command from a given (camera) image.
 

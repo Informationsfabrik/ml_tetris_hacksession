@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Optional, Tuple
 
 import cv2
 import numpy as np
@@ -88,7 +88,7 @@ class ColorDetectionTetris(TetrisGame):
         return False
 
     def detect_command_from_key_or_image(
-        self, frame: np.ndarray, bbox_array: np.ndarray, keyboard_event: str | None
+        self, frame: np.ndarray, bbox_array: np.ndarray, keyboard_event: Optional[str]
     ) -> Tuple[str, str, np.ndarray]:
         command = None
         height, width = frame.shape[:2]

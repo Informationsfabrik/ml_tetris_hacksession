@@ -2,7 +2,7 @@
 
 from os import PathLike
 from pathlib import Path
-from typing import Tuple
+from typing import Optional, Tuple, Union
 
 import numpy as np
 from PIL import Image, ImageOps
@@ -11,11 +11,11 @@ from tensorflow.keras.models import load_model
 
 
 def predict_single_image(
-    img_or_path: str | PathLike | Image.Image = Path("data/images/tasse.jpg"),
-    model_or_path: str
-    | PathLike
-    | Model = Path("data/models/teachablemachine/keras_model.h5"),
-    input_size: Tuple[int, int] | None = None,
+    img_or_path: Union[str, PathLike, Image.Image] = Path("data/images/tasse.jpg"),
+    model_or_path: Union[str, PathLike, Model] = Path(
+        "data/models/teachablemachine/keras_model.h5"
+    ),
+    input_size: Optional[Tuple[int, int]] = None,
 ) -> np.ndarray:
     """Load a keras image classification model and apply it to an image.
 
