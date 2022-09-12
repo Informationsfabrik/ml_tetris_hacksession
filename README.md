@@ -17,9 +17,14 @@ Install Python 3.10, if not already happened.
 git clone <url>
 cd src
 
-# Install dependencies
+# Install dependencies using pipenv
 pip install --user pipenv
 python -m pipenv install --dev
+
+# Alternative: Create env and install dependencies using venv and pip
+python -m venv env
+env/Scripts/activate # Windows: env/Scripts/activate.ps1
+pip install -r requirements.txt
 ```
 
 ## Usage

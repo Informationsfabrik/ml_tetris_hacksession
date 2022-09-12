@@ -1,0 +1,12 @@
+opencv-python
+tensorflow~=2.9
+numpy
+pillow
+scikit-learn
+questionary
+matplotlib
+black==22.6.0
+pyaudio
+pyyaml
+pysimplegui
+screeninfo
