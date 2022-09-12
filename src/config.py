@@ -3,7 +3,7 @@ from pathlib import Path
 MOVEMENTS = ["left", "rotate", "right", "other"]
 
 # game
-SPEED = 1.0
+SPEED = 0.4
 MODEL_MINIMUM_CONFIDENCE = 0.8
 
 # data generator
