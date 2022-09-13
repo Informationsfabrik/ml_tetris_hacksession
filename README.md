@@ -11,17 +11,18 @@ externally and is integrated into our program to create your own ML-model using 
 ## Setup
 
 Install Python 3.10, if not already happened.
+(Python >3.7 should also work, in which case you might need to change the Pipfile).
 
 ```sh
 # Check out this repository
 git clone <url>
-cd src
+cd ml_tetris_hacksession
 
 # Install dependencies using pipenv
 pip install --user pipenv
 python -m pipenv install --dev
 
-# Alternative: Create env and install dependencies using venv and pip
+# Alternative if pipenv is not working: Create env and install dependencies using venv and pip
 python -m venv env
 env/Scripts/activate # Windows: env/Scripts/activate.ps1
 pip install -r requirements.txt
